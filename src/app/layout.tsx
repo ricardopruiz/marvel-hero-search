@@ -5,7 +5,7 @@ import Topbar from "../components/Topbar";
 
 const robotoCondensed = Roboto_Condensed({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "700"],
   variable: "--font-default",
 });
 
