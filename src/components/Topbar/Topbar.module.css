@@ -1,0 +1,13 @@
+.topbar {
+  display: grid;
+  grid-template-columns: auto min-content;
+
+  background-color: var(--color-primary);
+
+  width: 100%;
+  padding: 1rem;
+}
+
+.logo {
+  cursor: pointer;
+}
