@@ -1,0 +1,14 @@
+.favoritebutton {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorited {
+  color: var(--color-accent);
+}
+
+.notfavorited {
+  color: var(--color-contrast);
+}

@@ -1,0 +1,11 @@
+.herocontainer {
+  background-color: var(--color-primary);
+
+  clip-path: polygon(
+    100% 0,
+    100% calc(100% - 12.86px),
+    calc(100% - 12.86px) 100%,
+    0 100%,
+    0 0
+  );
+}

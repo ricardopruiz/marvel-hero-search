@@ -1,0 +1,13 @@
+.heroeslist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10.75rem, auto));
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0 1rem;
+  gap: 1rem;
+
+  align-items: center;
+  justify-content: center;
+}
