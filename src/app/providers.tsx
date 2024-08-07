@@ -1,9 +1,9 @@
 "use client";
 
-import { HeroesContextProvider } from "../contexts/HeroesContext";
+import { CharactersContextProvider } from "../components/contexts/CharactersContext";
 
 const Providers = ({ children }: any) => (
-  <HeroesContextProvider>{children}</HeroesContextProvider>
+  <CharactersContextProvider>{children}</CharactersContextProvider>
 );
 
 export default Providers;

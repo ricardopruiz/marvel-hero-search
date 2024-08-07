@@ -1,14 +1,14 @@
-import styles from "./Topbar.module.css";
+import styles from "./Topbar.module.scss";
 import Image from "next/image";
-import FavoritedHeroes from "../FavoritedHeroes";
+import FavoritedCharacters from "../FavoritedCharacters";
 import Link from "next/link";
 
 const Topbar = () => {
   return (
-    <header className={styles.topbar}>
+    <header className={styles["topbar"]}>
       <Link href="/">
         <Image
-          className={styles.logo}
+          className={styles["logo"]}
           alt="topbar marvel logo"
           src="/img/marvel_logo.svg"
           width={130}
@@ -16,7 +16,7 @@ const Topbar = () => {
           priority={false}
         />
       </Link>
-      <FavoritedHeroes />
+      <FavoritedCharacters />
     </header>
   );
 };

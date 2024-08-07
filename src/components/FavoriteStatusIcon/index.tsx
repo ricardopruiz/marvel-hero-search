@@ -15,15 +15,15 @@ const FavoriteStatusIcon = ({
 }: FavoritedProps) => {
   return (
     <button
-      className={`${styles.favoritebutton} ${
-        size === "small" ? styles.sizesmall : styles.sizebig
+      className={`${styles["favorited-button"]} ${
+        size === "small" ? styles["size-small"] : styles["size-big"]
       }`}
       onClick={onClick}
     >
       {isFavorited ? (
-        <HeartIcon className={styles.favorited} />
+        <HeartIcon className={styles["favorited"]} />
       ) : (
-        <HeartEmptyIcon className={styles.notfavorited} />
+        <HeartEmptyIcon className={styles["not-favorited"]} />
       )}
     </button>
   );

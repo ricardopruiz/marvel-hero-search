@@ -1,11 +1,11 @@
 import Image from "next/image";
-import HeroContainer from "../HeroContainer";
+import CharacterContainer from "../CharacterContainer";
 import FavoriteStatusIcon from "../FavoriteStatusIcon";
-import styles from "./HeroProfile.module.scss";
+import styles from "./CharacterProfile.module.scss";
 import SectionTitle from "../SectionTitle";
 import ComicList from "../ComicList";
 
-type HeroProfileProps = {
+type CharacterProfileProps = {
   image: string;
   name: string;
   description?: string;
@@ -13,39 +13,41 @@ type HeroProfileProps = {
   setIsFavorited(): void;
 };
 
-const HeroProfile = ({
+const CharacterProfile = ({
   image,
   isFavorited,
   name,
   setIsFavorited,
   description,
-}: HeroProfileProps) => {
+}: CharacterProfileProps) => {
   return (
     <>
-      <HeroContainer>
-        <div className={styles.profileBasicInfo}>
+      <CharacterContainer>
+        <div className={styles["profile-basic-info"]}>
           <Image
-            className={styles.profileImage}
+            className={styles["profile-image"]}
             alt={`Profile image of character ${name}`}
             src={image}
             height={500}
             width={500}
             priority={false}
           />
-          <div className={styles.infocontainer}>
-            <div className={styles.basicinfo}>
-              <span className={styles.heroname}>{name.toUpperCase()}</span>
+          <div className={styles["info-container"]}>
+            <div className={styles["basic-info"]}>
+              <span className={styles["character-name"]}>
+                {name.toUpperCase()}
+              </span>
               <FavoriteStatusIcon
                 isFavorited={isFavorited}
                 onClick={setIsFavorited}
                 size="big"
               />
             </div>
-            <span className={styles.desc}>{description}</span>
+            <span className={styles["desc"]}>{description}</span>
           </div>
         </div>
-      </HeroContainer>
-      <div className={styles.comicsection}>
+      </CharacterContainer>
+      <div className={styles["comic-section"]}>
         <SectionTitle>COMICS</SectionTitle>
         <ComicList
           comicList={[
@@ -71,4 +73,4 @@ const HeroProfile = ({
   );
 };
 
-export default HeroProfile;
+export default CharacterProfile;

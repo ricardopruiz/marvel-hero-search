@@ -1,11 +1,11 @@
 "use client";
 
-import HeroProfile from "../components/HeroProfile";
+import CharacterProfile from "../components/CharacterProfile";
 
 const Page = () => {
   return (
     <div>
-      <HeroProfile
+      <CharacterProfile
         image="/img/marvel_logo.svg"
         isFavorited={false}
         name="adam warlock"

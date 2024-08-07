@@ -1,6 +1,6 @@
 @use "../../app/globalStyles/breakpoints.module.scss";
 
-.comicContainer {
+.comic-container {
   display: flex;
   flex-flow: column;
 
@@ -9,7 +9,7 @@
   width: 164px;
 }
 
-.comicImage {
+.comic-image {
   width: 164px;
   height: fit-content;
 
@@ -22,13 +22,13 @@
   }
 }
 
-.comicTitle {
+.comic-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 18.75px;
 }
 
-.comicYear {
+.comic-year {
   font-weight: 400;
   font-size: 12px;
   line-height: 14.06px;
