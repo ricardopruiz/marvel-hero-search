@@ -1,8 +1,15 @@
 .favoritebutton {
-  font-size: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.sizebig {
+  font-size: 24px;
+}
+
+.sizesmall {
+  font-size: 12px;
 }
 
 .favorited {

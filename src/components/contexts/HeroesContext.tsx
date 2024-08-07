@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { HeroesContextData } from "./HeroesContext.types";
-import { Hero } from "../types/heroes";
+import { Hero } from "../types/hero.types";
 
 const heroesContextInitialState: HeroesContextData = {
   favoritedHeroes: [],

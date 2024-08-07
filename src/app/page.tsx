@@ -1,26 +1,16 @@
 "use client";
-import SectionTitle from "../components/SectionTitle";
-import HeroesList from "../components/HeroesList";
-import Searcher from "../components/Searcher";
+
+import HeroProfile from "../components/HeroProfile";
 
 const Page = () => {
   return (
     <div>
-      <Searcher onChangeSearchText={() => {}} results={2} searchText="test" />
-      <SectionTitle>FAVORITES</SectionTitle>
-      <HeroesList
-        heroes={[
-          { id: 1 },
-          { id: 1 },
-          { id: 1 },
-          { id: 1 },
-          { id: 1 },
-          { id: 1 },
-          { id: 1 },
-          { id: 1 },
-          { id: 1 },
-          { id: 1 },
-        ]}
+      <HeroProfile
+        image="/img/marvel_logo.svg"
+        isFavorited={false}
+        name="adam warlock"
+        setIsFavorited={() => {}}
+        description="Created by the Enclave to be part of a race of super humans who would abolish war, illness, and crime, Adam Warlock is a unique being who uses his immense and formidable powers to safeguard the universe."
       />
     </div>
   );

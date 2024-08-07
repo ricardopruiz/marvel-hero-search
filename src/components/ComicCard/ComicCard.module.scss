@@ -1,0 +1,35 @@
+@use "../../app/globalStyles/breakpoints.module.scss";
+
+.comicContainer {
+  display: flex;
+  flex-flow: column;
+
+  gap: 12px;
+
+  width: 164px;
+}
+
+.comicImage {
+  width: 164px;
+  height: fit-content;
+
+  @media (min-width: breakpoints.$tablet) {
+    width: 168.53px;
+  }
+
+  @media (min-width: breakpoints.$desktop) {
+    width: 179.2px;
+  }
+}
+
+.comicTitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+}
+
+.comicYear {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.06px;
+}
