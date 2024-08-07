@@ -1,0 +1,65 @@
+@use "../../app/globalStyles/breakpoints.module.scss";
+
+.infocontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  padding: 24px 16px 48px;
+}
+
+.profileBasicInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: breakpoints.$tablet) {
+    flex-direction: row;
+  }
+
+  @media (min-width: breakpoints.$desktop) {
+    max-width: 960px;
+  }
+}
+
+.profileImage {
+  width: 100%;
+  height: min-content;
+
+  @media (min-width: breakpoints.$tablet) {
+    width: 278px;
+    height: 278px;
+  }
+
+  @media (min-width: breakpoints.$desktop) {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+.basicinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.heroname {
+  color: var(--color-contrast);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 37.5px;
+}
+
+.desc {
+  color: var(--color-contrast);
+  size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+}
+
+.comicsection {
+  margin-top: 48px;
+  padding: 0 16px;
+  gap: 24px;
+}

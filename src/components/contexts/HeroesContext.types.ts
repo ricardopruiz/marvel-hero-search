@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { Hero } from "../types/heroes";
+import { Hero } from "../types/hero.types";
 
 export type HeroesContextData = {
   favoritedHeroes: Hero[];

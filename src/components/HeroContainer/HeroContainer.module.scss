@@ -1,4 +1,12 @@
+@use "../../app/globalStyles/breakpoints.module.scss";
+
 .herocontainer {
+  display: flex;
+  flex-flow: column nowrap;
+
+  justify-content: center;
+  align-items: center;
+
   background-color: var(--color-primary);
 
   clip-path: polygon(

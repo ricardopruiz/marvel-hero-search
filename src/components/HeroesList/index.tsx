@@ -1,5 +1,5 @@
 import HeroCard from "../HeroCard";
-import { Hero } from "../types/heroes";
+import { Hero } from "../types/hero.types";
 import styles from "./HeroesList.module.css";
 
 type HeroesListProps = {

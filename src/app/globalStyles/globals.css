@@ -1,5 +1,18 @@
 @import "./colors.css";
-@import "./breakpoints.css";
+
+:root {
+  --primary: var(--color-accent);
+  --secondary: var(--color-background);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--secondary);
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+}
 
 html {
   -moz-box-sizing: border-box;
