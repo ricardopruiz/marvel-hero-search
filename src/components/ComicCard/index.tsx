@@ -8,17 +8,17 @@ type ComicCardProps = {
 
 const ComicCard = ({ comic }: ComicCardProps) => {
   return (
-    <div className={styles.comicContainer}>
+    <div className={styles["comic-container"]}>
       <Image
-        className={styles.comicImage}
+        className={styles["comic-image"]}
         alt={`The portrait of the comic ${comic.title}`}
         src={comic.image}
         width={500}
         height={500}
         priority={false}
       />
-      <span className={styles.comicTitle}>{comic.title}</span>
-      <span className={styles.comicYear}>{comic.year}</span>
+      <span className={styles["comic-title"]}>{comic.title}</span>
+      <span className={styles["comic-year"]}>{comic.year}</span>
     </div>
   );
 };

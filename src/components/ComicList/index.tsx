@@ -8,7 +8,7 @@ type ComicListProps = {
 
 const ComicList = ({ comicList }: ComicListProps) => {
   return (
-    <div className={styles.comicsWrapper}>
+    <div className={styles["comics-wrapper"]}>
       {comicList.map((comic, index) => (
         <ComicCard key={`characted-comic-${index}`} comic={comic} />
       ))}

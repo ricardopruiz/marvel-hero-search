@@ -1,14 +1,14 @@
-.favoritebutton {
+.favorited-button {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.sizebig {
+.size-big {
   font-size: 24px;
 }
 
-.sizesmall {
+.size-small {
   font-size: 12px;
 }
 
@@ -16,6 +16,6 @@
   color: var(--color-accent);
 }
 
-.notfavorited {
+.not-favorited {
   color: var(--color-contrast);
 }

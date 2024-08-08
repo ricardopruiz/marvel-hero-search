@@ -18,19 +18,19 @@ const Searcher = ({
     results !== 1 ? "RESULTS" : "RESULT"
   }`;
   return (
-    <div className={styles.inputwrapper}>
-      <label className={styles.label}>
+    <div className={styles["input-wrapper"]}>
+      <label className={styles["label"]}>
         <span>
-          <SearchIcon className={styles.icon} />
+          <SearchIcon className={styles["icon"]} />
         </span>
         <input
-          className={styles.input}
+          className={styles["input"]}
           value={searchText}
           onChange={(event) => onChangeSearchText(event.target.value)}
           placeholder="SEARCH A CHARACTER..."
         />
       </label>
-      <div className={styles.resultscounter}>{resultsFound}</div>
+      <div className={styles["results-counter"]}>{resultsFound}</div>
     </div>
   );
 };

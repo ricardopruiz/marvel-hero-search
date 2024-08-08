@@ -1,4 +1,4 @@
-.favorited-heroes {
+.favorited-characters {
   display: flex;
   flex-flow: row nowrap;
   gap: 0.5rem;
@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 
-.favorited-heroes--heart-container {
+.favorited-characters--heart-container {
   color: var(--color-accent);
   font-size: 1.5rem;
 }

@@ -1,4 +1,4 @@
-.inputwrapper {
+.input-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -33,7 +33,7 @@
   font-size: 0.75rem;
 }
 
-.resultscounter {
+.results-counter {
   color: var(--color-primary);
   font-size: 0.75rem;
   line-height: 0.9rem;

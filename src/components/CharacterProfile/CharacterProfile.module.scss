@@ -1,6 +1,6 @@
 @use "../../app/globalStyles/breakpoints.module.scss";
 
-.infocontainer {
+.info-container {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -8,7 +8,7 @@
   padding: 24px 16px 48px;
 }
 
-.profileBasicInfo {
+.profile-basic-info {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -23,7 +23,7 @@
   }
 }
 
-.profileImage {
+.profile-image {
   width: 100%;
   height: min-content;
 
@@ -38,14 +38,14 @@
   }
 }
 
-.basicinfo {
+.basic-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
 
-.heroName {
+.character-name {
   color: var(--color-contrast);
   font-weight: 700;
   font-size: 32px;
@@ -59,7 +59,7 @@
   line-height: 18.75px;
 }
 
-.comicsection {
+.comic-section {
   margin-top: 48px;
   padding: 0 16px;
   gap: 24px;
