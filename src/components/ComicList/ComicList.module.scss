@@ -1,12 +1,9 @@
-@use "../../app/globalStyles/breakpoints.module.scss";
-
 .comics-wrapper {
   display: flex;
   flex-flow: row nowrap;
 
   gap: 16px;
 
-  width: 100%;
-
   overflow-x: scroll;
+  padding-bottom: 24px;
 }

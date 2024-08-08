@@ -13,10 +13,12 @@ const Topbar = () => {
           src="/img/marvel_logo.svg"
           width={130}
           height={52}
-          priority={false}
+          priority
         />
       </Link>
-      <FavoritedCharacters />
+      <Link href="/favorited">
+        <FavoritedCharacters />
+      </Link>
     </header>
   );
 };

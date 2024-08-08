@@ -1,9 +1,18 @@
 @use "../../app/globalStyles/breakpoints.module.scss";
 
+.profile-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+
+  width: 100%;
+}
+
 .info-container {
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  width: 100%;
 
   padding: 24px 16px 48px;
 }
@@ -20,6 +29,8 @@
 
   @media (min-width: breakpoints.$desktop) {
     max-width: 960px;
+
+    align-self: center;
   }
 }
 
@@ -60,7 +71,17 @@
 }
 
 .comic-section {
+  display: flex;
+  flex-flow: column nowrap;
+
+  gap: 24px;
+
   margin-top: 48px;
   padding: 0 16px;
-  gap: 24px;
+
+  @media (min-width: breakpoints.$desktop) {
+    max-width: 960px;
+
+    align-self: center;
+  }
 }

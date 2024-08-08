@@ -6,6 +6,9 @@ const charactersContextInitialState: CharactersContextData = {
   favoritedCharacters: [],
   addFavoriteCharacter: (character: Character) => {},
   removeFavoriteCharacter: (character: Character) => {},
+  isCharacterFavorited: (character: Character) => {
+    return false;
+  },
 };
 
 export const CharactersContext = createContext<CharactersContextData>(
@@ -18,22 +21,31 @@ export const CharactersContextProvider = ({ children }: any) => {
   );
 
   const addFavoriteCharacter = (character: Character) => {
-    const isAlreadyFavorited = favoritedCharacters.find(
+    const isAlreadyFavorited = favoritedCharacters.findIndex(
       (favoritedcharacter) => favoritedcharacter.id === character.id
     );
-    if (isAlreadyFavorited)
+    if (isAlreadyFavorited === -1) {
       setFavoritedCharacters((oldFavoriteCharacters) => [
         ...oldFavoriteCharacters,
         character,
       ]);
+    }
   };
 
   const removeFavoriteCharacter = (character: Character) => {
     setFavoritedCharacters((oldFavorites) =>
       oldFavorites.filter(
-        (favoritedCharacter) => favoritedCharacter.id === character.id
+        (favoritedCharacter) => favoritedCharacter.id !== character.id
       )
     );
+  };
+
+  const isCharacterFavorited = (character: Character) => {
+    const isCharacterFavorited = favoritedCharacters.findIndex(
+      (favoritedCharacter) => favoritedCharacter.id === character.id
+    );
+
+    return isCharacterFavorited >= 0;
   };
 
   return (
@@ -42,6 +54,7 @@ export const CharactersContextProvider = ({ children }: any) => {
         favoritedCharacters,
         addFavoriteCharacter,
         removeFavoriteCharacter,
+        isCharacterFavorited,
       }}
     >
       {children}

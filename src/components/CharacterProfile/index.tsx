@@ -1,75 +1,52 @@
+"use client";
 import Image from "next/image";
 import CharacterContainer from "../CharacterContainer";
 import FavoriteStatusIcon from "../FavoriteStatusIcon";
 import styles from "./CharacterProfile.module.scss";
 import SectionTitle from "../SectionTitle";
 import ComicList from "../ComicList";
+import { Character } from "../types/character.types";
+import { buildThumbnailURL } from "@/utils/pathUtils";
+import { useState } from "react";
+import useCharacterComic from "../hooks/useCharacterComic";
+import Loading from "../Loading";
 
 type CharacterProfileProps = {
-  image: string;
-  name: string;
-  description?: string;
-  isFavorited: boolean;
-  setIsFavorited(): void;
+  character: Character;
 };
 
-const CharacterProfile = ({
-  image,
-  isFavorited,
-  name,
-  setIsFavorited,
-  description,
-}: CharacterProfileProps) => {
+const CharacterProfile = ({ character }: CharacterProfileProps) => {
+  const { comics, isLoading } = useCharacterComic(character.id);
+  const [isFavorited, setIsFavorited] = useState(false);
   return (
-    <>
-      <CharacterContainer>
+    <div className={styles["profile-wrapper"]}>
+      <CharacterContainer size="big">
         <div className={styles["profile-basic-info"]}>
           <Image
             className={styles["profile-image"]}
-            alt={`Profile image of character ${name}`}
-            src={image}
+            alt={`Profile image of ${character.name}`}
+            src={buildThumbnailURL(character.thumbnail)}
             height={500}
             width={500}
-            priority={false}
+            priority
           />
           <div className={styles["info-container"]}>
             <div className={styles["basic-info"]}>
               <span className={styles["character-name"]}>
-                {name.toUpperCase()}
+                {character.name.toUpperCase()}
               </span>
-              <FavoriteStatusIcon
-                isFavorited={isFavorited}
-                onClick={setIsFavorited}
-                size="big"
-              />
+              <FavoriteStatusIcon character={character} size="big" />
             </div>
-            <span className={styles["desc"]}>{description}</span>
+            <span className={styles["desc"]}>{character.description}</span>
           </div>
         </div>
       </CharacterContainer>
       <div className={styles["comic-section"]}>
         <SectionTitle>COMICS</SectionTitle>
-        <ComicList
-          comicList={[
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-            { image: "/img/marvel_logo.svg", title: "Comic 1", year: "2025" },
-          ]}
-        />
+        {isLoading && <Loading type="innerSpinner" />}
+        {!isLoading && <ComicList comicList={comics} />}
       </div>
-    </>
+    </div>
   );
 };
 

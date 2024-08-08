@@ -1,3 +1,4 @@
+import { format } from "path";
 import { Character } from "../components/types/character.types";
 import requestMarvel from "./marvelApi";
 
@@ -21,5 +22,14 @@ export const getPaginatedCharacters = (
 };
 
 export const getCharacter = (id: Character["id"]) => {
-  return requestMarvel(`/characters/${id}`, {});
+  return requestMarvel(`/characters/${id}`, {}).then(
+    ({ results }) => results[0] as Character
+  );
+};
+
+export const getCharacterComics = (id: Character["id"]) => {
+  return requestMarvel(`/characters/${id}/comics`, {
+    orderBy: "onsaleDate",
+    limit: "20",
+  });
 };

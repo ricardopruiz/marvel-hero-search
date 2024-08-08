@@ -1,7 +1,7 @@
 "use client";
 
 import SearchIcon from "../Icons/SearchIcon";
-import styles from "./Searcher.module.css";
+import styles from "./Searcher.module.scss";
 
 type SearcherProps = {
   searchText: string;

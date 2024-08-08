@@ -1,11 +1,24 @@
+@use "../../app/globalStyles/breakpoints.module.scss";
+
 .topbar {
+  position: sticky;
+  top: 0;
   display: grid;
-  grid-template-columns: auto min-content;
+  grid-template-columns: min-content min-content;
 
   background-color: var(--color-primary);
 
   width: 100%;
-  padding: 1rem;
+  padding: 16px;
+
+  z-index: 1;
+
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: breakpoints.$tablet) {
+    padding: 16px 48px;
+  }
 }
 
 .logo {
