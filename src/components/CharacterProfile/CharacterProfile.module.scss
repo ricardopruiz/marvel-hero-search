@@ -5,6 +5,8 @@
   flex-direction: column;
   gap: 24px;
 
+  width: 100%;
+
   padding: 24px 16px 48px;
 }
 
@@ -60,7 +62,11 @@
 }
 
 .comic-section {
+  display: flex;
+  flex-flow: column nowrap;
+
+  gap: 24px;
+
   margin-top: 48px;
   padding: 0 16px;
-  gap: 24px;
 }

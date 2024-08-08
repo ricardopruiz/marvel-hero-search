@@ -5,8 +5,6 @@
   flex-flow: column;
 
   gap: 12px;
-
-  width: 164px;
 }
 
 .comic-image {
@@ -26,6 +24,13 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 18.75px;
+
+  max-height: 38px;
+  max-width: fit-content;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  flex-grow: 1;
 }
 
 .comic-year {

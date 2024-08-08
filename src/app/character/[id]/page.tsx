@@ -1,14 +1,15 @@
-"use client";
+import { buildThumbnailURL } from "@/utils/pathUtils";
+import CharacterProfile from "../../../components/CharacterProfile";
+import { getCharacter } from "@/api/characters";
 
-import { Character } from "../../../components/types/character.types";
-import useCharacter from "../../../components/hooks/useCharacter";
-import { useParams } from "next/navigation";
+type CharacterPageProps = {
+  params: { id: string };
+};
 
-const CharacterPage = () => {
-  const { id } = useParams();
-  const { character, isLoading, isError } = useCharacter(Number(id));
+const CharacterPage = async ({ params: { id } }: CharacterPageProps) => {
+  const character = await getCharacter(Number(id));
 
-  return <>Character shit {!isLoading && character.name}</>;
+  return <CharacterProfile character={character} />;
 };
 
 export default CharacterPage;
