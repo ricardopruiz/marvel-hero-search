@@ -1,5 +1,12 @@
 @use "../../app/globalStyles/breakpoints.module.scss";
 
+.profile-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+
+  width: 100%;
+}
+
 .info-container {
   display: flex;
   flex-direction: column;
@@ -22,6 +29,8 @@
 
   @media (min-width: breakpoints.$desktop) {
     max-width: 960px;
+
+    align-self: center;
   }
 }
 
@@ -69,4 +78,10 @@
 
   margin-top: 48px;
   padding: 0 16px;
+
+  @media (min-width: breakpoints.$desktop) {
+    max-width: 960px;
+
+    align-self: center;
+  }
 }

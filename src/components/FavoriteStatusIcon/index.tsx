@@ -1,3 +1,5 @@
+"use client";
+
 import HeartEmptyIcon from "../Icons/HeartEmptyIcon";
 import HeartIcon from "../Icons/HeartIcon";
 import styles from "./FavoriteStatusIcon.module.css";

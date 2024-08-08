@@ -19,7 +19,7 @@ const CharacterProfile = ({ character }: CharacterProfileProps) => {
   const { comics, isLoading } = useCharacterComic(character.id);
   const [isFavorited, setIsFavorited] = useState(false);
   return (
-    <>
+    <div className={styles["profile-wrapper"]}>
       <CharacterContainer size="big">
         <div className={styles["profile-basic-info"]}>
           <Image
@@ -50,7 +50,7 @@ const CharacterProfile = ({ character }: CharacterProfileProps) => {
         {isLoading && <Loading type="innerSpinner" />}
         {!isLoading && <ComicList comicList={comics} />}
       </div>
-    </>
+    </div>
   );
 };
 
