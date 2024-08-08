@@ -26,7 +26,7 @@ const CharacterCard = ({ character }: { character: Character }) => {
             <span className={styles["character-name"]}>
               {character.name.toUpperCase()}
             </span>
-            <FavoriteStatusIcon isFavorited={false} onClick={() => {}} />
+            <FavoriteStatusIcon character={character} />
           </div>
         </div>
       </CharacterContainer>

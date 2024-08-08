@@ -35,11 +35,7 @@ const CharacterProfile = ({ character }: CharacterProfileProps) => {
               <span className={styles["character-name"]}>
                 {character.name.toUpperCase()}
               </span>
-              <FavoriteStatusIcon
-                isFavorited={isFavorited}
-                onClick={() => setIsFavorited}
-                size="big"
-              />
+              <FavoriteStatusIcon character={character} size="big" />
             </div>
             <span className={styles["desc"]}>{character.description}</span>
           </div>
