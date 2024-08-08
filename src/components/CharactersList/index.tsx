@@ -1,5 +1,5 @@
 import CharacterCard from "../CharacterCard";
-import { Character } from "../types/character.types";
+import { Character } from "../../types/character.types";
 import styles from "./CharactersList.module.scss";
 import { forwardRef } from "react";
 

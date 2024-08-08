@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getCharacter, getCharacterComics } from "../../api/characters";
+import { getCharacter, getCharacterComics } from "../api/characters";
 import { Character } from "../types/character.types";
 import { Comic } from "../types/comic.types";
 

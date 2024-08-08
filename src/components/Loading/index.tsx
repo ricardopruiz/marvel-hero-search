@@ -8,7 +8,7 @@ type LoadingProps = {
 const Loading = ({ type }: LoadingProps) => {
   return (
     <div className={styles["spinner"]}>
-      <LoadingSpinner size={type === "innerSpinner" ? "100px" : "300px"} />
+      <LoadingSpinner size={type === "innerSpinner" ? "50px" : "200px"} />
     </div>
   );
 };

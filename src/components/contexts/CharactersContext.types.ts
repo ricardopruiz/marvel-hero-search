@@ -1,4 +1,4 @@
-import { Character } from "../types/character.types";
+import { Character } from "../../types/character.types";
 
 export type CharactersContextData = {
   favoritedCharacters: Character[];

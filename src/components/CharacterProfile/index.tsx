@@ -5,10 +5,10 @@ import FavoriteStatusIcon from "../FavoriteStatusIcon";
 import styles from "./CharacterProfile.module.scss";
 import SectionTitle from "../SectionTitle";
 import ComicList from "../ComicList";
-import { Character } from "../types/character.types";
+import { Character } from "../../types/character.types";
 import { buildThumbnailURL } from "@/utils/pathUtils";
 import { useState } from "react";
-import useCharacterComic from "../hooks/useCharacterComic";
+import useCharacterComic from "../../hooks/useCharacterComic";
 import Loading from "../Loading";
 
 type CharacterProfileProps = {

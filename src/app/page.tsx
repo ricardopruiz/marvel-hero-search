@@ -1,11 +1,11 @@
 "use client";
 import { useRef, useState } from "react";
-import usePaginatedCharacters from "../components/hooks/usePaginatedCharacters";
-import useNearBottom from "../components/hooks/useNearBottom";
+import usePaginatedCharacters from "../hooks/usePaginatedCharacters";
+import useNearBottom from "../hooks/useNearBottom";
 import CharactersSearcher from "../components/CharactersSearcher";
 
 import styles from "./page.module.scss";
-import useDebouncedState from "../components/hooks/useDebouncedState";
+import useDebouncedState from "../hooks/useDebouncedState";
 
 const CHARACTERS_PER_PAGE = 50;
 

@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { CharactersContextData } from "./CharactersContext.types";
-import { Character } from "../types/character.types";
+import { Character } from "../../types/character.types";
 
 const charactersContextInitialState: CharactersContextData = {
   favoritedCharacters: [],

@@ -1,5 +1,5 @@
 import { format } from "path";
-import { Character } from "../components/types/character.types";
+import { Character } from "../types/character.types";
 import requestMarvel from "./marvelApi";
 
 type GetPaginatedCharactersOptions = {
