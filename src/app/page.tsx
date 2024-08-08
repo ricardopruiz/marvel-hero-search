@@ -1,16 +1,35 @@
 "use client";
+import { useRef, useState } from "react";
+import usePaginatedCharacters from "../components/hooks/usePaginatedCharacters";
+import useNearBottom from "../components/hooks/useNearBottom";
+import CharactersSearcher from "../components/CharactersSearcher";
 
-import CharacterProfile from "../components/CharacterProfile";
+import styles from "./page.module.scss";
+
+const CHARACTERS_PER_PAGE = 2;
 
 const Page = () => {
+  const charactersListRef = useRef<HTMLDivElement>(null);
+
+  const [searchText, setSearchText] = useState<string>("");
+  const {
+    characters = [],
+    fetchNextPage,
+    isFetchingNextPage,
+    isLoading,
+  } = usePaginatedCharacters(CHARACTERS_PER_PAGE, searchText);
+
+  useNearBottom(fetchNextPage, { ref: charactersListRef, offset: 1000 });
+
   return (
-    <div>
-      <CharacterProfile
-        image="/img/marvel_logo.svg"
-        isFavorited={false}
-        name="adam warlock"
-        setIsFavorited={() => {}}
-        description="Created by the Enclave to be part of a race of super humans who would abolish war, illness, and crime, Adam Warlock is a unique being who uses his immense and formidable powers to safeguard the universe."
+    <div className={styles["page-container"]}>
+      <CharactersSearcher
+        characters={characters}
+        searchValue={searchText}
+        setSearchValue={setSearchText}
+        isLoading={isLoading}
+        isLoadingNextPage={isFetchingNextPage}
+        charactersListRef={charactersListRef}
       />
     </div>
   );

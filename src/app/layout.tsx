@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto_Condensed } from "next/font/google";
 import "./globalStyles/globals.css";
 import Topbar from "../components/Topbar";
+import Providers from "./providers";
 
 const robotoCondensed = Roboto_Condensed({
   subsets: ["latin"],
@@ -22,13 +23,13 @@ export default function RootLayout({
 }>) {
   const fontClassNames = [robotoCondensed.className, robotoCondensed.variable];
   return (
-    <>
+    <Providers>
       <html lang="en">
         <body className={fontClassNames.join(" ")}>
           <Topbar />
           {children}
         </body>
       </html>
-    </>
+    </Providers>
   );
 }

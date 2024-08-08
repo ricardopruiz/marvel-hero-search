@@ -1,13 +1,23 @@
+@use "../../app/globalStyles/breakpoints.module.scss";
+
 .characters-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10.75rem, auto));
+  grid-template-columns: repeat(auto-fill, minmax(172.5px, auto));
 
   width: 100%;
   height: 100%;
-
-  padding: 0 1rem;
-  gap: 1rem;
+  gap: 16px;
 
   align-items: center;
   justify-content: center;
+
+  padding: 0 16px;
+
+  @media (min-width: breakpoints.$tablet) {
+    padding: 0 48px;
+  }
+
+  @media (min-width: breakpoints.$desktop) {
+    grid-template-columns: repeat(auto-fill, minmax(188.57px, auto));
+  }
 }
