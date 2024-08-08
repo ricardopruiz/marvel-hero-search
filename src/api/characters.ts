@@ -29,8 +29,7 @@ export const getCharacter = (id: Character["id"]) => {
 
 export const getCharacterComics = (id: Character["id"]) => {
   return requestMarvel(`/characters/${id}/comics`, {
-    format: "comic",
-    formatType: "comic",
-    noVariants: "true",
+    orderBy: "onsaleDate",
+    limit: "20",
   });
 };

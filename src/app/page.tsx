@@ -5,19 +5,24 @@ import useNearBottom from "../components/hooks/useNearBottom";
 import CharactersSearcher from "../components/CharactersSearcher";
 
 import styles from "./page.module.scss";
+import useDebouncedState from "../components/hooks/useDebouncedState";
 
-const CHARACTERS_PER_PAGE = 2;
+const CHARACTERS_PER_PAGE = 50;
 
 const Page = () => {
   const charactersListRef = useRef<HTMLDivElement>(null);
 
-  const [searchText, setSearchText] = useState<string>("");
+  const [searchText, setSearchText, debouncedSearchText] = useDebouncedState(
+    "",
+    500
+  );
+
   const {
     characters = [],
     fetchNextPage,
     isFetchingNextPage,
     isLoading,
-  } = usePaginatedCharacters(CHARACTERS_PER_PAGE, searchText);
+  } = usePaginatedCharacters(CHARACTERS_PER_PAGE, debouncedSearchText);
 
   useNearBottom(fetchNextPage, { ref: charactersListRef, offset: 1000 });
 

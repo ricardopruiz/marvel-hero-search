@@ -9,18 +9,18 @@ type CharactersSearcherProps = {
   characters: Character[];
   setSearchValue: Dispatch<SetStateAction<string>>;
   searchValue: string;
-  isLoading: boolean;
-  isLoadingNextPage: boolean;
-  charactersListRef: ForwardedRef<HTMLDivElement>;
+  isLoading?: boolean;
+  isLoadingNextPage?: boolean;
+  charactersListRef?: ForwardedRef<HTMLDivElement>;
 };
 
 const CharactersSearcher = ({
   characters,
   searchValue,
   setSearchValue,
-  isLoading,
-  isLoadingNextPage,
-  charactersListRef,
+  isLoading = false,
+  isLoadingNextPage = false,
+  charactersListRef = null,
 }: CharactersSearcherProps) => {
   return (
     <div className={styles["characters-searcher-wrapper"]}>

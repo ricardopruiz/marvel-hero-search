@@ -16,7 +16,9 @@ const Topbar = () => {
           priority
         />
       </Link>
-      <FavoritedCharacters />
+      <Link href="/favorited">
+        <FavoritedCharacters />
+      </Link>
     </header>
   );
 };

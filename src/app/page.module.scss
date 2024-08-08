@@ -1,5 +1,19 @@
+@use "../app/globalStyles/breakpoints.module.scss";
+
 .page-container {
   background-color: var(--color-contrast);
 
   padding: 24px 0;
+
+  @media (min-width: breakpoints.$desktop) {
+    padding: 48px 0;
+  }
+}
+
+.page-title {
+  padding: 0 16px;
+
+  @media (min-width: breakpoints.$desktop) {
+    padding: 0 48px;
+  }
 }

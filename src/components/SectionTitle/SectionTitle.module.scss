@@ -1,5 +1,12 @@
+@use "../../app/globalStyles/breakpoints.module.scss";
+
 .section-title {
   font-size: 24px;
   line-height: 28.13px;
   font-weight: 700;
+
+  @media (min-width: breakpoints.$desktop) {
+    font-size: 32px;
+    line-height: 37.5px;
+  }
 }

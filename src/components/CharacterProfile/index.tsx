@@ -28,7 +28,7 @@ const CharacterProfile = ({ character }: CharacterProfileProps) => {
             src={buildThumbnailURL(character.thumbnail)}
             height={500}
             width={500}
-            priority={false}
+            priority
           />
           <div className={styles["info-container"]}>
             <div className={styles["basic-info"]}>
