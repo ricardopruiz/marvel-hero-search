@@ -4,7 +4,7 @@ import CharactersSearcher from "../../components/CharactersSearcher";
 import styles from "../page.module.scss";
 import { CharactersContext } from "../../components/contexts/CharactersContext";
 import SectionTitle from "../../components/SectionTitle";
-import { Character } from "../../components/types/character.types";
+import { Character } from "../../types/character.types";
 
 const Favorited = () => {
   const { favoritedCharacters } = useContext(CharactersContext);

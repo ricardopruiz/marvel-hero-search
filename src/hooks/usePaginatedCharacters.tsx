@@ -1,5 +1,5 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { getPaginatedCharacters } from "../../api/characters";
+import { getPaginatedCharacters } from "../api/characters";
 import { Character } from "../types/character.types";
 
 const usePaginatedCharacters = (

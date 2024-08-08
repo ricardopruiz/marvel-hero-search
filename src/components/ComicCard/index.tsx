@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./ComicCard.module.scss";
-import { Comic } from "../types/comic.types";
+import { Comic } from "../../types/comic.types";
 import { buildThumbnailURL } from "@/utils/pathUtils";
 
 type ComicCardProps = {

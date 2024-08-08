@@ -1,6 +1,6 @@
 import Link from "next/link";
 import FavoriteStatusIcon from "../FavoriteStatusIcon";
-import { Character } from "../types/character.types";
+import { Character } from "../../types/character.types";
 import styles from "./CharacterCard.module.scss";
 import Image from "next/image";
 import CharacterContainer from "../CharacterContainer";

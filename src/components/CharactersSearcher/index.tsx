@@ -2,7 +2,7 @@ import { Dispatch, ForwardedRef, forwardRef, SetStateAction } from "react";
 import CharactersList from "../CharactersList";
 import Loading from "../Loading";
 import Searcher from "../Searcher";
-import { Character } from "../types/character.types";
+import { Character } from "../../types/character.types";
 import styles from "./CharactersSearcher.module.scss";
 
 type CharactersSearcherProps = {

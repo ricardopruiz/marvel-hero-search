@@ -5,7 +5,7 @@ import HeartEmptyIcon from "../Icons/HeartEmptyIcon";
 import HeartIcon from "../Icons/HeartIcon";
 import styles from "./FavoriteStatusIcon.module.css";
 import { CharactersContext } from "../contexts/CharactersContext";
-import { Character } from "../types/character.types";
+import { Character } from "../../types/character.types";
 
 type FavoritedProps = {
   character: Character;

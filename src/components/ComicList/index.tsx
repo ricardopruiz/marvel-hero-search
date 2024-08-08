@@ -1,5 +1,5 @@
 import ComicCard from "../ComicCard";
-import { Comic } from "../types/comic.types";
+import { Comic } from "../../types/comic.types";
 import styles from "./ComicList.module.scss";
 
 type ComicListProps = {
