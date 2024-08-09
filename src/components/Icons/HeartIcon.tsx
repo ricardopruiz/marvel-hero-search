@@ -1,5 +1,6 @@
 const HeartIcon = ({ className }: { className?: string }) => (
   <svg
+    data-testid="full-heart-icon"
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"

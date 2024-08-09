@@ -7,6 +7,7 @@ type LoadingSpinnerProps = {
 
 const LoadingSpinner = (props: LoadingSpinnerProps) => (
   <svg
+    data-testid="loading-spinner"
     xmlns="http://www.w3.org/2000/svg"
     width={props.size}
     height={props.size}

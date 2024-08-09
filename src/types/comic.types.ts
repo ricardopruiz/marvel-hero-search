@@ -1,6 +1,6 @@
 export type Comic = {
   id: number;
-  digitalID: number;
+  digitalId: number;
   title: string;
   issueNumber: number;
   variantDescription: string;
@@ -62,12 +62,8 @@ type DateElement = {
 
 type Thumbnail = {
   path: string;
-  extension: Extension;
+  extension: string;
 };
-
-enum Extension {
-  Jpg = "jpg",
-}
 
 type Price = {
   type: string;
