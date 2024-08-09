@@ -34,13 +34,8 @@ export type Stories = {
 export type StoriesItem = {
   resourceURI: string;
   name: string;
-  type: Type;
+  type: "cover" | "interiorStory";
 };
-
-export enum Type {
-  Cover = "cover",
-  InteriorStory = "interiorStory",
-}
 
 export type Thumbnail = {
   path: string;
