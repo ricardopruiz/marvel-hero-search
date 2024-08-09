@@ -7,17 +7,16 @@ import SectionTitle from "../SectionTitle";
 import ComicList from "../ComicList";
 import { Character } from "../../types/character.types";
 import { buildThumbnailURL } from "@/utils/pathUtils";
-import { useState } from "react";
 import useCharacterComic from "../../hooks/useCharacterComic";
 import Loading from "../Loading";
+import ErrorMessage from "../ErrorMessage";
 
 type CharacterProfileProps = {
   character: Character;
 };
 
 const CharacterProfile = ({ character }: CharacterProfileProps) => {
-  const { comics, isLoading } = useCharacterComic(character.id);
-  const [isFavorited, setIsFavorited] = useState(false);
+  const { comics, isLoading, error, isError } = useCharacterComic(character.id);
   return (
     <div className={styles["profile-wrapper"]}>
       <CharacterContainer size="big">
@@ -45,6 +44,7 @@ const CharacterProfile = ({ character }: CharacterProfileProps) => {
         <SectionTitle>COMICS</SectionTitle>
         {isLoading && <Loading type="innerSpinner" />}
         {!isLoading && <ComicList comicList={comics} />}
+        {isError && <ErrorMessage message={error.message}></ErrorMessage>}
       </div>
     </div>
   );
