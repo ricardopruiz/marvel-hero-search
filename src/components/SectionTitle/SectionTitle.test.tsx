@@ -1,10 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import SectionTitle from ".";
 import styles from "./SectionTitle.module.scss";
+import { faker } from "@faker-js/faker";
 
 describe("SectionTitle Component", () => {
   it("renders with the provided children", () => {
-    const text = "title";
+    const text = faker.lorem.sentence();
 
     render(<SectionTitle>{text}</SectionTitle>);
 
@@ -14,7 +15,7 @@ describe("SectionTitle Component", () => {
   });
 
   it("apply the CSS class", () => {
-    const text = "title";
+    const text = faker.lorem.sentence();
 
     render(<SectionTitle>{text}</SectionTitle>);
 
