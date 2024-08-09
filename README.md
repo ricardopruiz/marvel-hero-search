@@ -11,7 +11,7 @@ NEXT_PUBLIC_MARVEL_API_PUBLIC_KEY= # here goes your public key
 
 ## Important note
 
-The marvel API is experiencing some issues with its use, so the performance of this resources is extremely slow, and some calls could be interrupted by the browser. For testing purposes, we suggest to change the number of heroes loaded in the `CHARACTERS_PER_PAGE` constant in the `page.tsx` file, line 10.
+The marvel API is experiencing some issues with its use, so the performance of these resources is extremely slow, and some calls could be interrupted by the browser. For testing purposes, we suggest to change the number of heroes loaded in the `CHARACTERS_PER_PAGE` constant in the `page.tsx` file, line 10.
 
 ## First Steps
 
