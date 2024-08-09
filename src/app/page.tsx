@@ -22,6 +22,7 @@ const Page = () => {
     fetchNextPage,
     isFetchingNextPage,
     isLoading,
+    isPlaceholderData,
   } = usePaginatedCharacters(CHARACTERS_PER_PAGE, debouncedSearchText);
 
   useNearBottom(fetchNextPage, { ref: charactersListRef, offset: 1000 });

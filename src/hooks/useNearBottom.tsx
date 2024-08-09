@@ -23,8 +23,6 @@ const useNearBottom = <T extends HTMLElement>(
 
     window.addEventListener("scroll", handleScroll);
 
-    handleScroll();
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
