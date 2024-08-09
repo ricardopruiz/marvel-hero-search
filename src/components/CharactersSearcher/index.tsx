@@ -4,6 +4,7 @@ import Loading from "../Loading";
 import Searcher from "../Searcher";
 import { Character } from "../../types/character.types";
 import styles from "./CharactersSearcher.module.scss";
+import ErrorMessage from "../ErrorMessage";
 
 type CharactersSearcherProps = {
   characters: Character[];
@@ -12,6 +13,8 @@ type CharactersSearcherProps = {
   isLoading?: boolean;
   isLoadingNextPage?: boolean;
   charactersListRef?: ForwardedRef<HTMLDivElement>;
+  isError?: boolean;
+  error?: string;
 };
 
 const CharactersSearcher = ({
@@ -21,6 +24,8 @@ const CharactersSearcher = ({
   isLoading = false,
   isLoadingNextPage = false,
   charactersListRef = null,
+  isError = false,
+  error = "",
 }: CharactersSearcherProps) => {
   return (
     <div className={styles["characters-searcher-wrapper"]}>
@@ -34,6 +39,7 @@ const CharactersSearcher = ({
       )}
       {isLoading && <Loading type="pageSpinner" />}
       {isLoadingNextPage && <Loading type="innerSpinner" />}
+      {isError && <ErrorMessage message={error}></ErrorMessage>}
     </div>
   );
 };

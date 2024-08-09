@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import usePaginatedCharacters from "../hooks/usePaginatedCharacters";
 import useNearBottom from "../hooks/useNearBottom";
 import CharactersSearcher from "../components/CharactersSearcher";
@@ -22,7 +22,8 @@ const Page = () => {
     fetchNextPage,
     isFetchingNextPage,
     isLoading,
-    isPlaceholderData,
+    isError,
+    error,
   } = usePaginatedCharacters(CHARACTERS_PER_PAGE, debouncedSearchText);
 
   useNearBottom(fetchNextPage, { ref: charactersListRef, offset: 1000 });
@@ -36,6 +37,8 @@ const Page = () => {
         isLoading={isLoading}
         isLoadingNextPage={isFetchingNextPage}
         charactersListRef={charactersListRef}
+        isError={isError}
+        error={error?.message}
       />
     </div>
   );
