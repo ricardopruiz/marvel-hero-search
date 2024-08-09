@@ -1,4 +1,3 @@
-import { buildThumbnailURL } from "@/utils/pathUtils";
 import CharacterProfile from "../../../components/CharacterProfile";
 import { getCharacter } from "@/api/characters";
 

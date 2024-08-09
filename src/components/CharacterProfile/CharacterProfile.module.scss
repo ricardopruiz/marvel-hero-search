@@ -3,7 +3,8 @@
 .profile-wrapper {
   display: flex;
   flex-flow: column nowrap;
-
+  align-items: center;
+  gap: 48px;
   width: 100%;
 }
 
@@ -14,7 +15,7 @@
 
   width: 100%;
 
-  padding: 24px 16px 48px;
+  padding: 48px;
 }
 
 .profile-basic-info {
@@ -24,7 +25,6 @@
 
   @media (min-width: breakpoints.$tablet) {
     flex-direction: row;
-    gap: 48px;
   }
 
   @media (min-width: breakpoints.$desktop) {
@@ -71,17 +71,16 @@
 }
 
 .comic-section {
+  width: 100%;
+
   display: flex;
   flex-flow: column nowrap;
 
   gap: 24px;
 
-  margin-top: 48px;
   padding: 0 16px;
 
   @media (min-width: breakpoints.$desktop) {
     max-width: 960px;
-
-    align-self: center;
   }
 }

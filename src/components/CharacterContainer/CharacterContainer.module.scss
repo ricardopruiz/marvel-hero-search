@@ -1,6 +1,7 @@
 @use "../../app/globalStyles/breakpoints.module.scss";
 
 .character-container {
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
 

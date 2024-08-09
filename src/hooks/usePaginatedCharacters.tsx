@@ -7,7 +7,7 @@ const usePaginatedCharacters = (
   nameStartsWith?: string
 ) => {
   const query = useInfiniteQuery({
-    queryKey: ["characters", { charactersPerPage, nameStartsWith }],
+    queryKey: ["characters", charactersPerPage, nameStartsWith],
     queryFn: ({ pageParam = 1 }) => {
       return getPaginatedCharacters({
         charactersPerPage,
